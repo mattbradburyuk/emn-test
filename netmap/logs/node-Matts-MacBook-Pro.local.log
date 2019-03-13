@@ -2795,3 +2795,448 @@ and the EZM listening service on port: 12021 {}
 [INFO ] 2019-03-13T11:49:00,089Z [ShutdownHook] shell.InteractiveShell.shutdown - Shutting down the embedded shell {}
 [INFO ] 2019-03-13T11:49:02,312Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Close initiated... {}
 [INFO ] 2019-03-13T11:49:02,316Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Closed. {}
+[INFO ] 2019-03-13T15:18:49,222Z [main] doorman.DoormanArgsParser.executeCommand - Starting Network Services... {}
+[INFO ] 2019-03-13T15:18:49,256Z [main] common.utils.invoke - {
+    # network-map.conf: 1
+    "address" : "localhost:12020",
+    # network-map.conf: 3
+    "certificatesStoreFile" : "../pki/certificateStore.jks",
+    # network-map.conf: 4
+    "certificatesStorePassword" : "example-password",
+    # network-map.conf: 6
+    "dataSourceProperties" : {
+        # network-map.conf: 10
+        "dataSource.password" : "example-password",
+        # network-map.conf: 8
+        "dataSource.url" : "jdbc:h2:file:./network-map-persistence;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=0;AUTO_SERVER_PORT=0",
+        # network-map.conf: 9
+        "dataSource.user" : "example-user",
+        # network-map.conf: 7
+        "dataSourceClassName" : "org.h2.jdbcx.JdbcDataSource"
+    },
+    # network-map.conf: 13
+    "database" : {
+        # network-map.conf: 14
+        "runMigration" : true
+    },
+    # network-map.conf: 17
+    "networkMap" : {
+        # network-map.conf: 18
+        "cacheTimeout" : 15000,
+        # network-map.conf: 29
+        "checkRevocation" : false,
+        # network-map.conf: 32
+        "ezmListener" : {
+            # network-map.conf: 33
+            "port" : 12021,
+            # network-map.conf: 34
+            "reconnect" : true
+        },
+        # network-map.conf: 19
+        "localSigner" : {
+            # network-map.conf: 25
+            "keyAlias" : "cordanetworkmap",
+            # network-map.conf: 24
+            "keyPassword" : "example-password",
+            # network-map.conf: 20
+            "keyStore" : {
+                # network-map.conf: 21
+                "file" : "../pki/caKeyStore.jks",
+                # network-map.conf: 22
+                "password" : "example-password"
+            },
+            # network-map.conf: 26
+            "signInterval" : 15000
+        },
+        # network-map.conf: 30
+        "privateNetworkAutoEnrolment" : false
+    },
+    # network-map.conf: 40
+    # This section can be removed if the interactive shell is not required
+    "shell" : {
+        # network-map.conf: 43
+        "password" : "example-password",
+        # network-map.conf: 41
+        "sshdPort" : 12021,
+        # network-map.conf: 42
+        "user" : "testuser"
+    }
+}
+ {}
+[INFO ] 2019-03-13T15:18:49,569Z [main] manifests.Manifests.info - 7 attributes loaded from 2 stream(s) in 1ms, 7 saved, 1 ignored: ["Ant-Version", "Created-By", "Main-Class", "Manifest-Version", "Release-Version", "Revision", "Vendor"] {}
+[INFO ] 2019-03-13T15:18:49,569Z [main] common.utils.logStartupInfo - Release-Version: 0.3
+Revision: 3709631843eb292ff0c99d0d97156270a61c95d7 {}
+[INFO ] 2019-03-13T15:18:49,570Z [main] common.utils.logStartupInfo - PID: 27203 {}
+[INFO ] 2019-03-13T15:18:49,570Z [main] common.utils.logStartupInfo - Main class: /Users/matthewbradbury/r3_projects_code/emn-test/jars/doorman-0.3.jar {}
+[INFO ] 2019-03-13T15:18:49,570Z [main] common.utils.logStartupInfo - CommandLine Args:  {}
+[INFO ] 2019-03-13T15:18:49,570Z [main] common.utils.logStartupInfo - Application Args: --config-file network-map.conf {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - bootclasspath: /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/classes {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - classpath: ../jars/doorman-0.3.jar {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - VM Java HotSpot(TM) 64-Bit Server VM Oracle Corporation 25.192-b12 {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - Machine: Matts-MacBook-Pro.local {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - Working Directory: /Users/matthewbradbury/r3_projects_code/emn-test/netmap {}
+[INFO ] 2019-03-13T15:18:49,571Z [main] common.utils.logStartupInfo - Starting on address localhost:12020 {}
+[INFO ] 2019-03-13T15:18:49,588Z [main] hikari.HikariDataSource.<init> - HikariPool-1 - Started. {}
+[INFO ] 2019-03-13T15:18:51,789Z [main] persistence.SchemaMigration.doRunMigration - defaultSchemaName=PUBLIC {}
+[INFO ] 2019-03-13T15:18:51,789Z [main] persistence.SchemaMigration.doRunMigration - liquibaseSchemaName=PUBLIC {}
+[INFO ] 2019-03-13T15:18:51,789Z [main] persistence.SchemaMigration.doRunMigration - outputDefaultSchema=true {}
+[INFO ] 2019-03-13T15:18:52,676Z [main] liquibase.info - Reading from PUBLIC.DATABASECHANGELOG {}
+[INFO ] 2019-03-13T15:18:52,702Z [main] liquibase.info - Successfully acquired change log lock {}
+[INFO ] 2019-03-13T15:18:52,704Z [main] liquibase.info - Successfully released change log lock {}
+[INFO ] 2019-03-13T15:18:52,724Z [main] persistence.HibernateConfiguration.<init> - Init HibernateConfiguration for schemas: [NetworkMapSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:52,726Z [main] persistence.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: [NetworkMapSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:52,786Z [main] hibernate.Version.logVersion - HHH000412: Hibernate Core {[WORKING]} {}
+[INFO ] 2019-03-13T15:18:52,787Z [main] cfg.Environment.<clinit> - HHH000206: hibernate.properties not found {}
+[INFO ] 2019-03-13T15:18:52,806Z [main] common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} {}
+[INFO ] 2019-03-13T15:18:52,846Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.nodeapi.internal.persistence.HibernateConfiguration$NodeDatabaseConnectionProvider {}
+[INFO ] 2019-03-13T15:18:52,853Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect {}
+[INFO ] 2019-03-13T15:18:52,877Z [main] internal.EnversServiceImpl.configure - Envers integration enabled? : true {}
+[INFO ] 2019-03-13T15:18:52,878Z [main] type.BasicTypeRegistry.register - HHH000270: Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@431e86b1 {}
+[WARN ] 2019-03-13T15:18:52,992Z [main] java.JavaTypeDescriptorRegistry.checkEqualsAndHashCode - HHH000481: Encountered Java type [class net.corda.nodeapi.internal.SignedNodeInfo] for which we could not locate a JavaTypeDescriptor and which does not appear to implement equals and/or hashCode.  This can lead to significant performance problems when performing equality/dirty checking involving this Java type.  Consider registering a custom JavaTypeDescriptor or at least implementing equals/hashCode. {}
+[WARN ] 2019-03-13T15:18:52,995Z [main] java.JavaTypeDescriptorRegistry.checkEqualsAndHashCode - HHH000481: Encountered Java type [class net.corda.nodeapi.internal.SignedNodeInfo] for which we could not locate a JavaTypeDescriptor and which does not appear to implement equals and/or hashCode.  This can lead to significant performance problems when performing equality/dirty checking involving this Java type.  Consider registering a custom JavaTypeDescriptor or at least implementing equals/hashCode. {}
+[WARN ] 2019-03-13T15:18:52,996Z [main] java.JavaTypeDescriptorRegistry.checkEqualsAndHashCode - HHH000481: Encountered Java type [class net.corda.nodeapi.internal.SignedNodeInfo] for which we could not locate a JavaTypeDescriptor and which does not appear to implement equals and/or hashCode.  This can lead to significant performance problems when performing equality/dirty checking involving this Java type.  Consider registering a custom JavaTypeDescriptor or at least implementing equals/hashCode. {}
+[INFO ] 2019-03-13T15:18:53,865Z [main] persistence.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: [NetworkMapSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:53,943Z [main] migration.MigrationManager.validate - Current migration status: DB Version: 0.3, Expected Version: 0.3 {}
+[INFO ] 2019-03-13T15:18:53,970Z [main] internal.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory {}
+[INFO ] 2019-03-13T15:18:54,157Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="interface java.security.PublicKey" {}
+[INFO ] 2019-03-13T15:18:54,157Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="interface java.security.PrivateKey" {}
+[INFO ] 2019-03-13T15:18:54,160Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.lang.Throwable" {}
+[INFO ] 2019-03-13T15:18:54,160Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.lang.StackTraceElement" {}
+[INFO ] 2019-03-13T15:18:54,161Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.math.BigDecimal" {}
+[INFO ] 2019-03-13T15:18:54,162Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.math.BigInteger" {}
+[INFO ] 2019-03-13T15:18:54,162Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.util.Currency" {}
+[INFO ] 2019-03-13T15:18:54,162Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class net.corda.core.utilities.OpaqueBytesSubSequence" {}
+[INFO ] 2019-03-13T15:18:54,163Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.Instant" {}
+[INFO ] 2019-03-13T15:18:54,163Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.Duration" {}
+[INFO ] 2019-03-13T15:18:54,164Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalDate" {}
+[INFO ] 2019-03-13T15:18:54,165Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalDateTime" {}
+[INFO ] 2019-03-13T15:18:54,165Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalDate" {}
+[INFO ] 2019-03-13T15:18:54,165Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalTime" {}
+[INFO ] 2019-03-13T15:18:54,165Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalTime" {}
+[INFO ] 2019-03-13T15:18:54,166Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.ZonedDateTime" {}
+[INFO ] 2019-03-13T15:18:54,166Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalDateTime" {}
+[INFO ] 2019-03-13T15:18:54,167Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.ZoneId" {}
+[INFO ] 2019-03-13T15:18:54,167Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.ZoneId" {}
+[INFO ] 2019-03-13T15:18:54,167Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.OffsetTime" {}
+[INFO ] 2019-03-13T15:18:54,167Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalTime" {}
+[INFO ] 2019-03-13T15:18:54,167Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.ZoneId" {}
+[INFO ] 2019-03-13T15:18:54,168Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.OffsetDateTime" {}
+[INFO ] 2019-03-13T15:18:54,168Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.LocalDateTime" {}
+[INFO ] 2019-03-13T15:18:54,168Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.ZoneId" {}
+[INFO ] 2019-03-13T15:18:54,169Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.util.Optional" {}
+[INFO ] 2019-03-13T15:18:54,169Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.Year" {}
+[INFO ] 2019-03-13T15:18:54,170Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.YearMonth" {}
+[INFO ] 2019-03-13T15:18:54,170Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.MonthDay" {}
+[INFO ] 2019-03-13T15:18:54,171Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.time.Period" {}
+[INFO ] 2019-03-13T15:18:54,171Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.lang.Class" {}
+[INFO ] 2019-03-13T15:18:54,172Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.security.cert.X509Certificate" {}
+[INFO ] 2019-03-13T15:18:54,172Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.security.cert.X509CRL" {}
+[INFO ] 2019-03-13T15:18:54,173Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.security.cert.CertPath" {}
+[INFO ] 2019-03-13T15:18:54,173Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.lang.StringBuffer" {}
+[INFO ] 2019-03-13T15:18:54,174Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.io.InputStream" {}
+[INFO ] 2019-03-13T15:18:54,174Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.util.BitSet" {}
+[INFO ] 2019-03-13T15:18:54,174Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.util.EnumSet" {}
+[INFO ] 2019-03-13T15:18:54,175Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class java.lang.Class" {}
+[INFO ] 2019-03-13T15:18:54,176Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class net.corda.core.contracts.ContractAttachment" {}
+[INFO ] 2019-03-13T15:18:54,176Z [main] amqp.SerializerFactory.register - action="Registering custom serializer", class="class org.apache.activemq.artemis.api.core.SimpleString" {}
+[INFO ] 2019-03-13T15:18:54,296Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.time.Duration, declaredType=java.time.Duration {}
+[INFO ] 2019-03-13T15:18:54,297Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.time.Instant, declaredType=java.time.Instant {}
+[INFO ] 2019-03-13T15:18:54,313Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.PublicKey, declaredType=java.security.PublicKey {}
+[INFO ] 2019-03-13T15:18:54,398Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.PublicKey, declaredType=java.security.PublicKey {}
+[INFO ] 2019-03-13T15:18:54,399Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.PublicKey, declaredType=java.security.PublicKey {}
+[INFO ] 2019-03-13T15:18:54,401Z [main] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.PublicKey, declaredType=java.security.PublicKey {}
+[INFO ] 2019-03-13T15:18:54,440Z [main] doorman.NetworkManagementServer.getNetworkMapService - Starting Network Map web service with minimum platform version
+[-1],
+newPKIOnly [false]
+latest network parameters: NetworkParameters {
+  minimumPlatformVersion=4
+  notaries=[NotaryInfo(identity=O=NotaryA, L=London, C=GB, validating=false)]
+  maxMessageSize=10485760
+  maxTransactionSize=10485760
+  whitelistedContractImplementations {
+    
+  }
+  eventHorizon=PT720H
+  modifiedTime=2019-03-12T12:01:52.563Z
+  epoch=1
+},
+and the EZM listening service on port: 12021 {}
+[INFO ] 2019-03-13T15:18:54,452Z [main] Netty Server[12021].start - Starting listening service on port:12021 ssl:disabled {}
+[INFO ] 2019-03-13T15:18:54,571Z [main] Netty Server[12021].start - Server listening on port 12021 ssl:disabled {}
+[INFO ] 2019-03-13T15:18:54,629Z [main] common.utils.validated - Constructed signing certificate chain of length 3: [CN=Corda Network Map Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Subordinate Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-13T15:18:54,638Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:18:54,639Z [main] doorman.NetworkManagementServer.getNetworkMapService - starting shell {}
+[INFO ] 2019-03-13T15:18:54,652Z [pool-2-thread-1] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.time.Instant, declaredType=java.time.Instant {}
+[INFO ] 2019-03-13T15:18:54,654Z [pool-2-thread-1] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.time.Instant, declaredType=java.time.Instant {}
+[INFO ] 2019-03-13T15:18:54,664Z [pool-2-thread-1] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.time.Instant, declaredType=java.time.Instant {}
+[INFO ] 2019-03-13T15:18:54,688Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:18:54,723Z [pool-2-thread-1] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.CertPath, declaredType=java.security.cert.CertPath {}
+[INFO ] 2019-03-13T15:18:54,727Z [pool-2-thread-1] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.CertPath, declaredType=java.security.cert.CertPath {}
+[INFO ] 2019-03-13T15:18:54,787Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:18:54,788Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:18:54,839Z [main] eddsa.EdDSASecurityProviderRegistrar.getOrCreateProvider - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider {}
+[INFO ] 2019-03-13T15:18:55,307Z [main] ConsolePrint.getNetworkMapService - Binding Shell SSHD server on port 12021 {}
+[INFO ] 2019-03-13T15:18:55,309Z [main] impl.PersistentNodeInfoStorage.getNodeInfosFromStaging - Retrieving all node infos from staging table. {}
+[INFO ] 2019-03-13T15:18:55,335Z [main] util.log.initialized - Logging initialized @6860ms to org.eclipse.jetty.util.log.Slf4jLog {}
+[INFO ] 2019-03-13T15:18:55,409Z [main] doorman.NetworkManagementWebServer.start - Starting network management web services... {}
+[INFO ] 2019-03-13T15:18:55,411Z [main] server.Server.doStart - jetty-9.4.z-SNAPSHOT {}
+[INFO ] 2019-03-13T15:18:55,757Z [main] handler.ContextHandler.doStart - Started o.e.j.s.ServletContextHandler@3f5f79d8{/,null,AVAILABLE} {}
+[INFO ] 2019-03-13T15:18:55,762Z [main] server.AbstractConnector.doStart - Started ServerConnector@21dd91da{HTTP/1.1,[http/1.1]}{localhost:12020} {}
+[INFO ] 2019-03-13T15:18:55,762Z [main] server.Server.doStart - Started @7288ms {}
+[INFO ] 2019-03-13T15:18:55,763Z [main] ConsolePrint.start - Network management web services started on localhost:12020 with [NetworkMapWebService, MonitoringWebService] {}
+[INFO ] 2019-03-13T15:19:07,255Z [qtp1865152087-28] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:19:07,285Z [qtp1865152087-28] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.X509Certificate, declaredType=java.security.cert.X509Certificate {}
+[INFO ] 2019-03-13T15:19:07,288Z [qtp1865152087-28] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.X509Certificate, declaredType=java.security.cert.X509Certificate {}
+[INFO ] 2019-03-13T15:19:07,290Z [qtp1865152087-28] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.X509Certificate, declaredType=java.security.cert.X509Certificate {}
+[INFO ] 2019-03-13T15:19:07,290Z [qtp1865152087-28] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.X509Certificate, declaredType=java.security.cert.X509Certificate {}
+[INFO ] 2019-03-13T15:19:07,291Z [qtp1865152087-28] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=sun.security.x509.X509CertImpl, declaredType=java.security.cert.X509Certificate {}
+[INFO ] 2019-03-13T15:19:09,640Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:19:09,649Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:19:09,693Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:19:09,694Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:19:11,907Z [qtp1865152087-25] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:19:11,911Z [qtp1865152087-25] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.CertPath, declaredType=java.security.cert.CertPath {}
+[INFO ] 2019-03-13T15:19:11,913Z [qtp1865152087-25] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.CertPath, declaredType=java.security.cert.CertPath {}
+[INFO ] 2019-03-13T15:19:11,914Z [qtp1865152087-25] amqp.SerializerFactory.findCustomSerializer$serialization - action="Using custom serializer", class=java.security.cert.CertPath, declaredType=java.security.cert.CertPath {}
+[INFO ] 2019-03-13T15:19:11,979Z [qtp1865152087-25] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:12010], legalIdentitiesAndCerts=[O=NotaryA, L=London, C=GB], platformVersion=4, serial=1552391319196) {}
+[INFO ] 2019-03-13T15:19:11,993Z [qtp1865152087-25] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:12010], legalIdentitiesAndCerts=[O=NotaryA, L=London, C=GB], platformVersion=4, serial=1552391319196) with hash: FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D {}
+[INFO ] 2019-03-13T15:19:24,641Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:19:24,652Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:19:24,756Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Signed new network map for network 'Public Network' {}
+[INFO ] 2019-03-13T15:19:24,756Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.saveNewNetworkMap - Saving new network map to database... {}
+[INFO ] 2019-03-13T15:19:24,795Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Persisted new network map for network 'Public Network' : NetworkMap {
+  nodeInfoHashes {
+    9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506
+    C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5
+    8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC
+    FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D
+    
+  }
+  networkParameterHash=622C6DFB554EB6FBB0C31B7C4BAE579D7619620BC0BC38D03FE2BC7ED9458CDB
+  parametersUpdate=null
+} {}
+[INFO ] 2019-03-13T15:19:24,795Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:19:27,006Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:19:39,642Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:19:39,652Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:19:39,694Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:19:39,694Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:19:42,032Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:19:47,010Z [qtp1865152087-27] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:19:47,057Z [qtp1865152087-27] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10005], legalIdentitiesAndCerts=[O=Party1, L=London, C=GB], platformVersion=4, serial=1552403319798) {}
+[INFO ] 2019-03-13T15:19:47,062Z [qtp1865152087-27] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10005], legalIdentitiesAndCerts=[O=Party1, L=London, C=GB], platformVersion=4, serial=1552403319798) with hash: 9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506 {}
+[INFO ] 2019-03-13T15:19:54,647Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:19:54,655Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:19:54,698Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Signed new network map for network 'Public Network' {}
+[INFO ] 2019-03-13T15:19:54,698Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.saveNewNetworkMap - Saving new network map to database... {}
+[INFO ] 2019-03-13T15:19:54,724Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Persisted new network map for network 'Public Network' : NetworkMap {
+  nodeInfoHashes {
+    C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5
+    8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC
+    FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D
+    9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506
+    
+  }
+  networkParameterHash=622C6DFB554EB6FBB0C31B7C4BAE579D7619620BC0BC38D03FE2BC7ED9458CDB
+  parametersUpdate=null
+} {}
+[INFO ] 2019-03-13T15:19:54,724Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:19:57,052Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:19:59,492Z [qtp1865152087-31] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:19:59,599Z [qtp1865152087-31] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10008], legalIdentitiesAndCerts=[O=Party2, L=Paris, C=FR], platformVersion=4, serial=1552403679399) {}
+[INFO ] 2019-03-13T15:19:59,603Z [qtp1865152087-31] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10008], legalIdentitiesAndCerts=[O=Party2, L=Paris, C=FR], platformVersion=4, serial=1552403679399) with hash: C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5 {}
+[INFO ] 2019-03-13T15:20:07,282Z [qtp1865152087-30] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:20:07,308Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10011], legalIdentitiesAndCerts=[O=Party2, L=NewYork, C=US], platformVersion=4, serial=1552403778031) {}
+[INFO ] 2019-03-13T15:20:07,312Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10011], legalIdentitiesAndCerts=[O=Party2, L=NewYork, C=US], platformVersion=4, serial=1552403778031) with hash: 8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC {}
+[INFO ] 2019-03-13T15:20:09,651Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:20:09,656Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:20:09,675Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Signed new network map for network 'Public Network' {}
+[INFO ] 2019-03-13T15:20:09,676Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.saveNewNetworkMap - Saving new network map to database... {}
+[INFO ] 2019-03-13T15:20:09,685Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Persisted new network map for network 'Public Network' : NetworkMap {
+  nodeInfoHashes {
+    FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D
+    9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506
+    C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5
+    8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC
+    
+  }
+  networkParameterHash=622C6DFB554EB6FBB0C31B7C4BAE579D7619620BC0BC38D03FE2BC7ED9458CDB
+  parametersUpdate=null
+} {}
+[INFO ] 2019-03-13T15:20:09,685Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:20:12,082Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:20:24,657Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:20:24,663Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:20:24,681Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:20:24,681Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:20:27,100Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:20:39,662Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:20:39,668Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:20:39,684Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:20:39,684Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:20:42,119Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:20:54,664Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:20:54,669Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:20:54,685Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:20:54,685Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:20:57,133Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:21:09,668Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:21:09,674Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:21:09,690Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:21:09,690Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:21:12,154Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:21:24,672Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:21:24,678Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:21:24,694Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:21:24,694Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:21:27,169Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:21:39,677Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:21:39,681Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:21:39,696Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:21:39,696Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:21:42,186Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:21:54,683Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:21:54,689Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:21:54,703Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:21:54,703Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:21:57,201Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:22:09,687Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:22:09,692Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:22:09,706Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:22:09,707Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:22:12,220Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:22:24,688Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:22:24,693Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:22:24,708Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:22:24,708Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:22:27,235Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:22:39,150Z [qtp1865152087-31] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:22:39,171Z [qtp1865152087-31] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10005], legalIdentitiesAndCerts=[O=Party1, L=London, C=GB], platformVersion=4, serial=1552403319798) {}
+[INFO ] 2019-03-13T15:22:39,174Z [qtp1865152087-31] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10005], legalIdentitiesAndCerts=[O=Party1, L=London, C=GB], platformVersion=4, serial=1552403319798) with hash: 9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506 {}
+[INFO ] 2019-03-13T15:22:39,691Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:22:39,696Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:22:39,722Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Signed new network map for network 'Public Network' {}
+[INFO ] 2019-03-13T15:22:39,723Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.saveNewNetworkMap - Saving new network map to database... {}
+[INFO ] 2019-03-13T15:22:39,737Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Persisted new network map for network 'Public Network' : NetworkMap {
+  nodeInfoHashes {
+    FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D
+    C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5
+    8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC
+    9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506
+    
+  }
+  networkParameterHash=622C6DFB554EB6FBB0C31B7C4BAE579D7619620BC0BC38D03FE2BC7ED9458CDB
+  parametersUpdate=null
+} {}
+[INFO ] 2019-03-13T15:22:39,737Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:22:42,253Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:22:47,869Z [qtp1865152087-30] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:22:47,889Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10008], legalIdentitiesAndCerts=[O=Party2, L=Paris, C=FR], platformVersion=4, serial=1552403679399) {}
+[INFO ] 2019-03-13T15:22:47,893Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10008], legalIdentitiesAndCerts=[O=Party2, L=Paris, C=FR], platformVersion=4, serial=1552403679399) with hash: C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5 {}
+[INFO ] 2019-03-13T15:22:51,699Z [qtp1865152087-30] webservice.NetworkMapWebService.registerNode - Processing network map request for node publish {}
+[INFO ] 2019-03-13T15:22:51,714Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Saving signed node info: NodeInfo(addresses=[localhost:10011], legalIdentitiesAndCerts=[O=Party2, L=NewYork, C=US], platformVersion=4, serial=1552403778031) {}
+[INFO ] 2019-03-13T15:22:51,717Z [qtp1865152087-30] impl.PersistentNodeInfoStorage.putNodeInfo - Done saving node info: NodeInfo(addresses=[localhost:10011], legalIdentitiesAndCerts=[O=Party2, L=NewYork, C=US], platformVersion=4, serial=1552403778031) with hash: 8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC {}
+[INFO ] 2019-03-13T15:22:54,696Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:22:54,698Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:22:54,712Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Signed new network map for network 'Public Network' {}
+[INFO ] 2019-03-13T15:22:54,712Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.saveNewNetworkMap - Saving new network map to database... {}
+[INFO ] 2019-03-13T15:22:54,720Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Persisted new network map for network 'Public Network' : NetworkMap {
+  nodeInfoHashes {
+    FFF36CDAD80075A2F8A0FA2ACE16339E82BCEE2C143075EEFAFE28984AA0BB4D
+    9EEF2189CAD28AD4D953A778B0864FF83C2318F2524EDB977FB20BF6F8027506
+    C9E823F64D0690598B939F5DC50AC0C3CFDFB282A359E04DAE41AC9A19D24CE5
+    8C1A7B22B9E9E426A8D3EB61ED88C976FC038EB0E7C6A4422552E0203DB682FC
+    
+  }
+  networkParameterHash=622C6DFB554EB6FBB0C31B7C4BAE579D7619620BC0BC38D03FE2BC7ED9458CDB
+  parametersUpdate=null
+} {}
+[INFO ] 2019-03-13T15:22:54,720Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:22:57,276Z [qtp1865152087-27] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:23:09,700Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:23:09,705Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:23:09,718Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:23:09,718Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:23:12,292Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:23:24,705Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:23:24,710Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:23:24,723Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:23:24,723Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:23:27,303Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:23:39,705Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:23:39,709Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:23:39,720Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:23:39,720Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:23:42,320Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:23:54,710Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:23:54,716Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:23:54,730Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:23:54,730Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:23:57,335Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:24:09,713Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:24:09,719Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:24:09,731Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:24:09,731Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:24:12,350Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:24:24,716Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:24:24,721Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:24:24,734Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:24:24,735Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:24:27,366Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:24:39,721Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:24:39,726Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:24:39,738Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:24:39,738Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:24:42,384Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:24:54,726Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:24:54,731Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:24:54,743Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:24:54,744Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:24:57,399Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:25:09,731Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:25:09,736Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:25:09,748Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:25:09,748Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:25:12,414Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:25:24,735Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:25:24,739Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:25:24,750Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:25:24,750Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:25:27,431Z [qtp1865152087-30] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:25:39,739Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:25:39,744Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:25:39,755Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:25:39,755Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:25:42,442Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:25:54,743Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:25:54,749Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:25:54,761Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:25:54,762Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:25:57,460Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:26:09,748Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:26:09,753Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:26:09,765Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:26:09,766Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:26:12,478Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:26:24,753Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:26:24,757Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:26:24,769Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:26:24,770Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:26:27,494Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:26:39,755Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:26:39,760Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:26:39,773Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:26:39,773Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:26:42,512Z [qtp1865152087-31] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:26:54,758Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - Started signing of the network map {}
+[INFO ] 2019-03-13T15:26:54,763Z [pool-2-thread-1] impl.PersistentNetworkMapStorage.getNodeInfoHashes - Retrieving all node info hashes from DB {}
+[INFO ] 2019-03-13T15:26:54,774Z [pool-2-thread-1] signer.NetworkMapSigner.maybeSignNetworkMap - Current network map for network 'Public Network' is up-to-date {}
+[INFO ] 2019-03-13T15:26:54,774Z [pool-2-thread-1] signer.NetworkMapSigner.signNetworkMaps - End of network map signing {}
+[INFO ] 2019-03-13T15:26:57,525Z [qtp1865152087-29] webservice.NetworkMapWebService.load - Re-loading network map cache {}
+[INFO ] 2019-03-13T15:27:00,672Z [ShutdownHook] doorman.NetworkManagementServer.close - Shutting down Network Management server... {}
+[INFO ] 2019-03-13T15:27:00,672Z [ShutdownHook] doorman.NetworkManagementWebServer.close - Shutting down network management web services... {}
+[INFO ] 2019-03-13T15:27:00,676Z [ShutdownHook] server.AbstractConnector.doStop - Stopped ServerConnector@21dd91da{HTTP/1.1,[http/1.1]}{localhost:12020} {}
+[INFO ] 2019-03-13T15:27:00,682Z [ShutdownHook] handler.ContextHandler.doStop - Stopped o.e.j.s.ServletContextHandler@3f5f79d8{/,null,UNAVAILABLE} {}
+[INFO ] 2019-03-13T15:27:00,683Z [ShutdownHook] shell.InteractiveShell.shutdown - Shutting down the embedded shell {}
+[INFO ] 2019-03-13T15:27:02,901Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Close initiated... {}
+[INFO ] 2019-03-13T15:27:02,906Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Closed. {}

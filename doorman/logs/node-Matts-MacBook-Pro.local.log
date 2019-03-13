@@ -2091,3 +2091,252 @@ Revision: 3709631843eb292ff0c99d0d97156270a61c95d7 {}
 [INFO ] 2019-03-13T11:49:02,116Z [ShutdownHook] shell.InteractiveShell.shutdown - Shutting down the embedded shell {}
 [INFO ] 2019-03-13T11:49:04,340Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Close initiated... {}
 [INFO ] 2019-03-13T11:49:04,342Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Closed. {}
+[INFO ] 2019-03-13T15:18:25,854Z [main] doorman.DoormanArgsParser.executeCommand - Starting Network Services... {}
+[INFO ] 2019-03-13T15:18:25,900Z [main] common.utils.invoke - {
+    # doorman.conf: 1
+    "address" : "localhost:12000",
+    # doorman.conf: 3
+    "certificatesStoreFile" : "../pki/certificateStore.jks",
+    # doorman.conf: 4
+    "certificatesStorePassword" : "example-password",
+    # doorman.conf: 6
+    "dataSourceProperties" : {
+        # doorman.conf: 10
+        "dataSource.password" : "example-password",
+        # doorman.conf: 8
+        "dataSource.url" : "jdbc:h2:file:./doorman-persistence;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=0;AUTO_SERVER_PORT=0",
+        # doorman.conf: 9
+        "dataSource.user" : "example-user",
+        # doorman.conf: 7
+        "dataSourceClassName" : "org.h2.jdbcx.JdbcDataSource"
+    },
+    # doorman.conf: 13
+    "database" : {
+        # doorman.conf: 14
+        "runMigration" : true
+    },
+    # doorman.conf: 17
+    "doorman" : {
+        # doorman.conf: 19
+        "approveAll" : true,
+        # doorman.conf: 21
+        "localSigner" : {
+            # doorman.conf: 27
+            "keyAlias" : "cordadoormanca",
+            # doorman.conf: 26
+            "keyPassword" : "example-password",
+            # doorman.conf: 22
+            "keyStore" : {
+                # doorman.conf: 23
+                "file" : "../pki/caKeyStore.jks",
+                # doorman.conf: 24
+                "password" : "example-password"
+            },
+            # doorman.conf: 28
+            "signInterval" : 15000
+        },
+        # doorman.conf: 18
+        "updateInterval" : 15000
+    },
+    # doorman.conf: 33
+    # This section can be removed if the interactive shell is not required
+    "shell" : {
+        # doorman.conf: 36
+        "password" : "example-password",
+        # doorman.conf: 34
+        "sshdPort" : 12001,
+        # doorman.conf: 35
+        "user" : "testuser"
+    }
+}
+ {}
+[INFO ] 2019-03-13T15:18:26,267Z [main] manifests.Manifests.info - 7 attributes loaded from 2 stream(s) in 2ms, 7 saved, 1 ignored: ["Ant-Version", "Created-By", "Main-Class", "Manifest-Version", "Release-Version", "Revision", "Vendor"] {}
+[INFO ] 2019-03-13T15:18:26,267Z [main] common.utils.logStartupInfo - Release-Version: 0.3
+Revision: 3709631843eb292ff0c99d0d97156270a61c95d7 {}
+[INFO ] 2019-03-13T15:18:26,268Z [main] common.utils.logStartupInfo - PID: 27192 {}
+[INFO ] 2019-03-13T15:18:26,268Z [main] common.utils.logStartupInfo - Main class: /Users/matthewbradbury/r3_projects_code/emn-test/jars/doorman-0.3.jar {}
+[INFO ] 2019-03-13T15:18:26,268Z [main] common.utils.logStartupInfo - CommandLine Args:  {}
+[INFO ] 2019-03-13T15:18:26,268Z [main] common.utils.logStartupInfo - Application Args: --config-file doorman.conf {}
+[INFO ] 2019-03-13T15:18:26,268Z [main] common.utils.logStartupInfo - bootclasspath: /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/classes {}
+[INFO ] 2019-03-13T15:18:26,269Z [main] common.utils.logStartupInfo - classpath: ../jars/doorman-0.3.jar {}
+[INFO ] 2019-03-13T15:18:26,269Z [main] common.utils.logStartupInfo - VM Java HotSpot(TM) 64-Bit Server VM Oracle Corporation 25.192-b12 {}
+[INFO ] 2019-03-13T15:18:26,269Z [main] common.utils.logStartupInfo - Machine: Matts-MacBook-Pro.local {}
+[INFO ] 2019-03-13T15:18:26,269Z [main] common.utils.logStartupInfo - Working Directory: /Users/matthewbradbury/r3_projects_code/emn-test/doorman {}
+[INFO ] 2019-03-13T15:18:26,269Z [main] common.utils.logStartupInfo - Starting on address localhost:12000 {}
+[INFO ] 2019-03-13T15:18:26,293Z [main] hikari.HikariDataSource.<init> - HikariPool-1 - Started. {}
+[INFO ] 2019-03-13T15:18:28,393Z [main] persistence.SchemaMigration.doRunMigration - defaultSchemaName=PUBLIC {}
+[INFO ] 2019-03-13T15:18:28,393Z [main] persistence.SchemaMigration.doRunMigration - liquibaseSchemaName=PUBLIC {}
+[INFO ] 2019-03-13T15:18:28,393Z [main] persistence.SchemaMigration.doRunMigration - outputDefaultSchema=true {}
+[INFO ] 2019-03-13T15:18:29,188Z [main] liquibase.info - Reading from PUBLIC.DATABASECHANGELOG {}
+[INFO ] 2019-03-13T15:18:29,222Z [main] liquibase.info - Successfully acquired change log lock {}
+[INFO ] 2019-03-13T15:18:29,225Z [main] liquibase.info - Successfully released change log lock {}
+[INFO ] 2019-03-13T15:18:29,244Z [main] persistence.HibernateConfiguration.<init> - Init HibernateConfiguration for schemas: [DoormanSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:29,245Z [main] persistence.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: [DoormanSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:29,302Z [main] hibernate.Version.logVersion - HHH000412: Hibernate Core {[WORKING]} {}
+[INFO ] 2019-03-13T15:18:29,303Z [main] cfg.Environment.<clinit> - HHH000206: hibernate.properties not found {}
+[INFO ] 2019-03-13T15:18:29,322Z [main] common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} {}
+[INFO ] 2019-03-13T15:18:29,360Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.nodeapi.internal.persistence.HibernateConfiguration$NodeDatabaseConnectionProvider {}
+[INFO ] 2019-03-13T15:18:29,368Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect {}
+[INFO ] 2019-03-13T15:18:29,392Z [main] internal.EnversServiceImpl.configure - Envers integration enabled? : true {}
+[INFO ] 2019-03-13T15:18:29,393Z [main] type.BasicTypeRegistry.register - HHH000270: Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@36c2d629 {}
+[INFO ] 2019-03-13T15:18:30,292Z [main] persistence.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: [DoormanSchemaV1(name=com.r3.corda.networkmanage.shared.persistence.NetworkManagementSchemaServices, version=1)] {}
+[INFO ] 2019-03-13T15:18:30,359Z [main] migration.MigrationManager.validate - Current migration status: DB Version: 0.3, Expected Version: 0.3 {}
+[INFO ] 2019-03-13T15:18:30,361Z [main] doorman.NetworkManagementServer.getDoormanService - Starting Doorman web service with minimum platform version [-1] and newPKIOnly [false]. {}
+[INFO ] 2019-03-13T15:18:30,369Z [main] doorman.NetworkManagementServer.getDoormanService - Starting Doorman socket server on port 5050. {}
+[INFO ] 2019-03-13T15:18:30,369Z [main] Netty Server[5050].start - Starting listening service on port:5050 ssl:disabled {}
+[INFO ] 2019-03-13T15:18:30,570Z [main] Netty Server[5050].start - Server listening on port 5050 ssl:disabled {}
+[WARN ] 2019-03-13T15:18:30,571Z [main] doorman.NetworkManagementServer.getDoormanService - Certificate signing request service is running without any workflow plugin. {}
+[INFO ] 2019-03-13T15:18:30,635Z [main] common.utils.validated - Constructed signing certificate chain of length 3: [CN=Corda Doorman Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Subordinate Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-13T15:18:30,672Z [pool-2-thread-1] internal.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory {}
+[INFO ] 2019-03-13T15:18:30,743Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:18:30,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:18:30,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:18:30,747Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:18:30,803Z [main] eddsa.EdDSASecurityProviderRegistrar.getOrCreateProvider - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider {}
+[INFO ] 2019-03-13T15:18:31,221Z [main] ConsolePrint.getDoormanService - Binding Shell SSHD server on port 12001 {}
+[INFO ] 2019-03-13T15:18:31,233Z [main] util.log.initialized - Logging initialized @6353ms to org.eclipse.jetty.util.log.Slf4jLog {}
+[INFO ] 2019-03-13T15:18:31,301Z [main] doorman.NetworkManagementWebServer.start - Starting network management web services... {}
+[INFO ] 2019-03-13T15:18:31,303Z [main] server.Server.doStart - jetty-9.4.z-SNAPSHOT {}
+[INFO ] 2019-03-13T15:18:31,606Z [main] handler.ContextHandler.doStart - Started o.e.j.s.ServletContextHandler@79c2bc34{/,null,AVAILABLE} {}
+[INFO ] 2019-03-13T15:18:31,611Z [main] server.AbstractConnector.doStart - Started ServerConnector@2cc9a948{HTTP/1.1,[http/1.1]}{localhost:12000} {}
+[INFO ] 2019-03-13T15:18:31,612Z [main] server.Server.doStart - Started @6732ms {}
+[INFO ] 2019-03-13T15:18:31,612Z [main] ConsolePrint.start - Network management web services started on localhost:12000 with [RegistrationWebService, MonitoringWebService] {}
+[INFO ] 2019-03-13T15:18:45,647Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:18:45,648Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:18:45,648Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:18:45,648Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:19:00,651Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:19:00,651Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:19:00,651Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:19:00,651Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:19:15,655Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:19:15,655Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:19:15,656Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:19:15,656Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:19:30,659Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:19:30,659Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:19:30,660Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:19:30,660Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:19:45,662Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:19:45,663Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:19:45,663Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:19:45,663Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:20:00,667Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:20:00,667Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:20:00,668Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:20:00,668Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:20:15,671Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:20:15,672Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:20:15,673Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:20:15,673Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:20:30,673Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:20:30,673Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:20:30,673Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:20:30,674Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:20:45,679Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:20:45,679Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:20:45,679Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:20:45,679Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:21:00,681Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:21:00,682Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:21:00,682Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:21:00,682Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:21:15,684Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:21:15,684Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:21:15,684Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:21:15,685Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:21:30,688Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:21:30,689Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:21:30,689Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:21:30,689Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:21:45,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:21:45,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:21:45,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:21:45,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:22:00,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:22:00,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:22:00,692Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:22:00,692Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:22:15,690Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:22:15,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:22:15,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:22:15,691Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:22:30,696Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:22:30,696Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:22:30,696Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:22:30,696Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:22:45,700Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:22:45,700Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:22:45,700Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:22:45,700Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:23:00,703Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:23:00,704Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:23:00,704Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:23:00,704Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:23:15,706Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:23:15,707Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:23:15,707Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:23:15,707Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:23:30,708Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:23:30,709Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:23:30,709Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:23:30,709Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:23:45,710Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:23:45,710Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:23:45,710Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:23:45,710Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:24:00,714Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:24:00,715Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:24:00,716Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:24:00,716Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:24:15,715Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:24:15,715Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:24:15,715Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:24:15,715Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:24:30,719Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:24:30,719Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:24:30,719Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:24:30,720Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:24:45,723Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:24:45,724Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:24:45,724Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:24:45,724Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:25:00,728Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:25:00,729Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:25:00,729Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:25:00,729Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:25:15,729Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:25:15,730Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:25:15,730Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:25:15,730Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:25:30,732Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:25:30,732Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:25:30,733Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:25:30,733Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:25:45,737Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:25:45,737Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:25:45,737Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:25:45,737Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:26:00,742Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:26:00,742Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:26:00,743Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:26:00,743Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:26:15,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:26:15,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:26:15,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:26:15,746Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:26:30,749Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:26:30,750Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:26:30,750Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:26:30,750Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:26:45,752Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Signing CSRs... {}
+[INFO ] 2019-03-13T15:26:45,753Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.invoke - Initializing signer... {}
+[INFO ] 2019-03-13T15:26:45,753Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - Storing signed CSRs... {}
+[INFO ] 2019-03-13T15:26:45,753Z [pool-2-thread-1] signer.CertificateSigningRequestSigner.signRequests - The following certificates have been signed by [LocalSigner]: {}
+[INFO ] 2019-03-13T15:26:58,354Z [ShutdownHook] doorman.NetworkManagementServer.close - Shutting down Network Management server... {}
+[INFO ] 2019-03-13T15:26:58,355Z [ShutdownHook] doorman.NetworkManagementWebServer.close - Shutting down network management web services... {}
+[INFO ] 2019-03-13T15:26:58,360Z [ShutdownHook] server.AbstractConnector.doStop - Stopped ServerConnector@2cc9a948{HTTP/1.1,[http/1.1]}{localhost:12000} {}
+[INFO ] 2019-03-13T15:26:58,366Z [ShutdownHook] handler.ContextHandler.doStop - Stopped o.e.j.s.ServletContextHandler@79c2bc34{/,null,UNAVAILABLE} {}
+[INFO ] 2019-03-13T15:26:58,367Z [ShutdownHook] shell.InteractiveShell.shutdown - Shutting down the embedded shell {}
+[INFO ] 2019-03-13T15:27:00,592Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Close initiated... {}
+[INFO ] 2019-03-13T15:27:00,594Z [ShutdownHook] pool.HikariPool.shutdown - HikariPool-1 - Closed. {}
