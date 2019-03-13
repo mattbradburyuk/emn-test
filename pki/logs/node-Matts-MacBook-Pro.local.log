@@ -1,0 +1,437 @@
+[WARN ] 2019-03-12T11:27:42,202Z [main] ConsolePrint.main - This JAR is compiled against the Linux version of the Utimaco HSM libraries. Therefore, some of the functionality might not be available when executed under a different OS. {}
+[ERROR] 2019-03-12T11:27:42,212Z [main] ConsolePrint.uncaughtException - Error while executing Network services tools command {}
+[ERROR] 2019-03-12T11:27:42,212Z [main] ConsolePrint.uncaughtException - Network services tools configuration error: Config file /Users/matthewbradbury/r3_projects_code/mbezm/pki/pki-generation.conf does not exist!.
+Please consult running network services documentation. {}
+java.lang.IllegalArgumentException: Config file /Users/matthewbradbury/r3_projects_code/mbezm/pki/pki-generation.conf does not exist!
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool$parsedConfig$2.invoke(CertHierarchyGeneratorTool.kt:271) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool$parsedConfig$2.invoke(CertHierarchyGeneratorTool.kt:39) ~[utilities-0.3.jar:?]
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool.getParsedConfig(CertHierarchyGeneratorTool.kt) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool.run(CertHierarchyGeneratorTool.kt:54) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine.execute(CommandLine.java:858) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine.access$700(CommandLine.java:104) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1035) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1003) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$AbstractParseResultHandler.handleParseResult(CommandLine.java:911) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.ToolArgsParser.executeCommand(Main.kt:90) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.MainKt.main(Main.kt:44) ~[utilities-0.3.jar:?]
+[WARN ] 2019-03-12T11:28:41,141Z [main] ConsolePrint.main - This JAR is compiled against the Linux version of the Utimaco HSM libraries. Therefore, some of the functionality might not be available when executed under a different OS. {}
+[ERROR] 2019-03-12T11:28:41,148Z [main] ConsolePrint.uncaughtException - Error while executing Network services tools command {}
+[ERROR] 2019-03-12T11:28:41,148Z [main] ConsolePrint.uncaughtException - Network services tools configuration error: Config file /Users/matthewbradbury/r3_projects_code/mbezm/pki/pki-generation.conf does not exist!.
+Please consult running network services documentation. {}
+java.lang.IllegalArgumentException: Config file /Users/matthewbradbury/r3_projects_code/mbezm/pki/pki-generation.conf does not exist!
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool$parsedConfig$2.invoke(CertHierarchyGeneratorTool.kt:271) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool$parsedConfig$2.invoke(CertHierarchyGeneratorTool.kt:39) ~[utilities-0.3.jar:?]
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool.getParsedConfig(CertHierarchyGeneratorTool.kt) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.tools.generator.CertificateHierarchyGeneratorTool.run(CertHierarchyGeneratorTool.kt:54) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine.execute(CommandLine.java:858) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine.access$700(CommandLine.java:104) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1035) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1003) ~[utilities-0.3.jar:?]
+	at picocli.CommandLine$AbstractParseResultHandler.handleParseResult(CommandLine.java:911) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.ToolArgsParser.executeCommand(Main.kt:90) ~[utilities-0.3.jar:?]
+	at com.r3.corda.networkmanage.utilities.MainKt.main(Main.kt:44) ~[utilities-0.3.jar:?]
+[WARN ] 2019-03-12T11:30:00,156Z [main] ConsolePrint.main - This JAR is compiled against the Linux version of the Utimaco HSM libraries. Therefore, some of the functionality might not be available when executed under a different OS. {}
+[INFO ] 2019-03-12T11:30:00,195Z [main] common.utils.invoke - {
+    # ./pki-generation.conf: 11
+    "certificates" : {
+        # ./pki-generation.conf: 25
+        "cordadoormanca" : {
+            # ./pki-generation.conf: 27
+            "role" : "DOORMAN_CA",
+            # ./pki-generation.conf: 26
+            "signer" : "cordasubordinateca",
+            # ./pki-generation.conf: 28
+            "subject" : "CN=Corda Doorman Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US"
+        },
+        # ./pki-generation.conf: 30
+        "cordanetworkmap" : {
+            # ./pki-generation.conf: 33
+            "issuesCertificates" : false,
+            # ./pki-generation.conf: 32
+            "role" : "NETWORK_MAP",
+            # ./pki-generation.conf: 31
+            "signer" : "cordasubordinateca",
+            # ./pki-generation.conf: 34
+            "subject" : "CN=Corda Network Map Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US"
+        },
+        # ./pki-generation.conf: 12
+        "cordarootca" : {
+            # ./pki-generation.conf: 13
+            "isSelfSigned" : true,
+            # ./pki-generation.conf: 14
+            "subject" : "CN=Corda Root Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US"
+        },
+        # ./pki-generation.conf: 21
+        "cordasubordinateca" : {
+            # ./pki-generation.conf: 22
+            "signer" : "cordarootca",
+            # ./pki-generation.conf: 23
+            "subject" : "CN=Corda Subordinate Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US"
+        },
+        # ./pki-generation.conf: 16
+        "cordatlscrlsigner" : {
+            # ./pki-generation.conf: 17
+            "isSelfSigned" : true,
+            # ./pki-generation.conf: 18
+            "issuesCertificates" : false,
+            # ./pki-generation.conf: 19
+            "subject" : "CN=Corda TLS Signer Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US"
+        }
+    },
+    # ./pki-generation.conf: 5
+    "certificatesStore" : {
+        # ./pki-generation.conf: 6
+        "file" : "./certificateStore.jks"
+    },
+    # ./pki-generation.conf: 1
+    "globalPassword" : "example-password",
+    # ./pki-generation.conf: 2
+    "keyStore" : {
+        # ./pki-generation.conf: 3
+        "file" : "./caKeyStore.jks"
+    },
+    # ./pki-generation.conf: 8
+    "networkTrustStore" : {
+        # ./pki-generation.conf: 9
+        "file" : "./networkRootTrustStore.jks"
+    }
+}
+ {}
+[INFO ] 2019-03-12T11:30:00,667Z [main] ConsolePrint.generateKeyAndCsr - New key pair named cordatlscrlsigner has been generated and stored in the local key store ./caKeyStore.jks. {}
+[INFO ] 2019-03-12T11:30:00,679Z [main] ConsolePrint.getSigningKeyPairAndCertificate - Retrieving the signing key pair. {}
+[INFO ] 2019-03-12T11:30:00,687Z [main] ConsolePrint.generateCertificate - Certificate for C=US,L=New York,O=Example HoldCo LLC,OU=Corda,CN=Corda TLS Signer Certificate created. {}
+[INFO ] 2019-03-12T11:30:00,690Z [main] ConsolePrint.generateCertificate - Certificate generated: [
+[
+  Version: V3
+  Subject: CN=Corda TLS Signer Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  Signature Algorithm: SHA256withECDSA, OID = 1.2.840.10045.4.3.2
+
+  Key:  Sun EC public key, 256 bits
+  public x coord: 82747400276516997599626470109410193431742975380948945123892909457487807837658
+  public y coord: 7249241748220640025234608760735675447373305716287336583034320810246431168325
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+  Validity: [From: Tue Mar 12 00:00:00 GMT 2019,
+               To: Mon Mar 07 00:00:00 GMT 2039]
+  Issuer: CN=Corda TLS Signer Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  SerialNumber: [    3a321062 baaa84a4]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:false
+  PathLen: undefined
+]
+
+[2]: ObjectId: 2.5.29.37 Criticality=false
+ExtendedKeyUsages [
+  serverAuth
+  clientAuth
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: A6 33 A0 8B 57 8E 6B 8F   CA DB E0 9F E5 D1 FB 7E  .3..W.k.........
+0010: 74 F6 FF D0                                        t...
+]
+]
+
+]
+  Algorithm: [SHA256withECDSA]
+  Signature:
+0000: 30 44 02 20 55 7F AC E8   01 53 B7 64 55 56 5C 3C  0D. U....S.dUV\<
+0010: 92 C9 47 C6 22 E9 E3 62   D9 50 69 79 42 87 44 47  ..G."..b.PiyB.DG
+0020: 06 C6 8D 14 02 20 27 7F   4A 4A 66 56 AD 19 CF CD  ..... '.JJfV....
+0030: DE 81 B1 3C A2 CC E2 61   F8 E7 A8 8E 80 FD C5 7F  ...<...a........
+0040: F7 BD 26 0F BA 6D                                  ..&..m
+
+] {}
+[INFO ] 2019-03-12T11:30:00,691Z [main] ConsolePrint.generateCertificate - Certificate stored under cordatlscrlsigner in the certificate store. {}
+[INFO ] 2019-03-12T11:30:00,735Z [main] common.utils.validated - Constructed signing certificate chain of length 1: [CN=Corda TLS Signer Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-12T11:30:00,736Z [main] ConsolePrint.invoke - Updating the key `cordatlscrlsigner` certificate chain in the local store... {}
+[INFO ] 2019-03-12T11:30:00,740Z [main] ConsolePrint.updateCertificate - Certificate updated under the `cordatlscrlsigner` in the local store. {}
+[INFO ] 2019-03-12T11:30:00,741Z [main] ConsolePrint.storeCertificate - Certificate stored under cordatlscrlsigner in the network root trust store. {}
+[INFO ] 2019-03-12T11:30:00,746Z [main] ConsolePrint.generateKeyAndCsr - New key pair named cordarootca has been generated and stored in the local key store ./caKeyStore.jks. {}
+[INFO ] 2019-03-12T11:30:00,750Z [main] ConsolePrint.getSigningKeyPairAndCertificate - Retrieving the signing key pair. {}
+[INFO ] 2019-03-12T11:30:00,754Z [main] ConsolePrint.generateCertificate - Certificate for C=US,L=New York,O=Example HoldCo LLC,OU=Corda,CN=Corda Root Certificate created. {}
+[INFO ] 2019-03-12T11:30:00,756Z [main] ConsolePrint.generateCertificate - Certificate generated: [
+[
+  Version: V3
+  Subject: CN=Corda Root Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  Signature Algorithm: SHA256withECDSA, OID = 1.2.840.10045.4.3.2
+
+  Key:  Sun EC public key, 256 bits
+  public x coord: 75182173753857208779176762307984602984684886967245770105064946283099296231540
+  public y coord: 59818273719213539941568257506649629407602629244080174119248855713859353276543
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+  Validity: [From: Tue Mar 12 00:00:00 GMT 2019,
+               To: Mon Mar 07 00:00:00 GMT 2039]
+  Issuer: CN=Corda Root Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  SerialNumber: [    2fdc23b7 d15ddc9d]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+[2]: ObjectId: 2.5.29.37 Criticality=false
+ExtendedKeyUsages [
+  serverAuth
+  clientAuth
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 0C 0F CD CF 3E 1C 12 8C   F1 41 81 82 B4 BA 67 A3  ....>....A....g.
+0010: 1B 78 3D 54                                        .x=T
+]
+]
+
+]
+  Algorithm: [SHA256withECDSA]
+  Signature:
+0000: 30 46 02 21 00 F7 B7 1C   92 4A 2C CE DA A0 C9 59  0F.!.....J,....Y
+0010: F8 5C FC 35 C8 D6 E0 D2   BA 06 12 9F 9B 77 BE E3  .\.5.........w..
+0020: C3 F8 8C EB FC 02 21 00   C0 F7 BC 56 89 30 BD F8  ......!....V.0..
+0030: E5 32 9C CD 5B B9 88 55   9E BA 10 A9 E3 C2 84 17  .2..[..U........
+0040: 15 5F F5 C4 DE 72 BB 5B                            ._...r.[
+
+] {}
+[INFO ] 2019-03-12T11:30:00,757Z [main] ConsolePrint.generateCertificate - Certificate stored under cordarootca in the certificate store. {}
+[INFO ] 2019-03-12T11:30:00,759Z [main] common.utils.validated - Constructed signing certificate chain of length 1: [CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-12T11:30:00,760Z [main] ConsolePrint.invoke - Updating the key `cordarootca` certificate chain in the local store... {}
+[INFO ] 2019-03-12T11:30:00,762Z [main] ConsolePrint.updateCertificate - Certificate updated under the `cordarootca` in the local store. {}
+[INFO ] 2019-03-12T11:30:00,763Z [main] ConsolePrint.storeCertificate - Certificate stored under cordarootca in the network root trust store. {}
+[INFO ] 2019-03-12T11:30:00,768Z [main] ConsolePrint.generateKeyAndCsr - New key pair named cordasubordinateca has been generated and stored in the local key store ./caKeyStore.jks. {}
+[INFO ] 2019-03-12T11:30:00,771Z [main] ConsolePrint.getSigningKeyPairAndCertificate - Retrieving the signing key pair. {}
+[INFO ] 2019-03-12T11:30:00,778Z [main] ConsolePrint.generateCertificate - Certificate for C=US,L=New York,O=Example HoldCo LLC,OU=Corda,CN=Corda Subordinate Certificate created. {}
+[INFO ] 2019-03-12T11:30:00,779Z [main] ConsolePrint.generateCertificate - Certificate generated: [
+[
+  Version: V3
+  Subject: CN=Corda Subordinate Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  Signature Algorithm: SHA256withECDSA, OID = 1.2.840.10045.4.3.2
+
+  Key:  Sun EC public key, 256 bits
+  public x coord: 53870794434950426932222152803697127969554451959316680977199891926177411307320
+  public y coord: 31556157515943031381106365131715615151083483818304435342584965312857222783408
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+  Validity: [From: Tue Mar 12 00:00:00 GMT 2019,
+               To: Mon Mar 07 00:00:00 GMT 2039]
+  Issuer: CN=Corda Root Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  SerialNumber: [    15fc099e 5dbf5c42]
+
+Certificate Extensions: 5
+[1]: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: 0C 0F CD CF 3E 1C 12 8C   F1 41 81 82 B4 BA 67 A3  ....>....A....g.
+0010: 1B 78 3D 54                                        .x=T
+]
+]
+
+[2]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+[3]: ObjectId: 2.5.29.37 Criticality=false
+ExtendedKeyUsages [
+  serverAuth
+  clientAuth
+]
+
+[4]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Key_CertSign
+  Crl_Sign
+]
+
+[5]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 49 9E 3D CE F7 EF 03 0B   62 CD 6D C3 2A 9F 55 13  I.=.....b.m.*.U.
+0010: 23 79 48 7E                                        #yH.
+]
+]
+
+]
+  Algorithm: [SHA256withECDSA]
+  Signature:
+0000: 30 45 02 21 00 A5 9B 85   90 10 E8 D3 16 50 28 A4  0E.!.........P(.
+0010: DB 43 A3 D2 AA 4C 58 2C   E6 70 54 6D 39 D1 57 34  .C...LX,.pTm9.W4
+0020: 89 EB CC 36 BE 02 20 21   98 4E AC 6D AF D6 A4 F8  ...6.. !.N.m....
+0030: F4 B5 AC A1 F2 AB 22 0C   3E E7 3D 93 9B BB 6E 39  ......".>.=...n9
+0040: D6 21 6F 7C 03 7D 78                               .!o...x
+
+] {}
+[INFO ] 2019-03-12T11:30:00,780Z [main] ConsolePrint.generateCertificate - Certificate stored under cordasubordinateca in the certificate store. {}
+[INFO ] 2019-03-12T11:30:00,781Z [main] common.utils.validated - Constructed signing certificate chain of length 2: [CN=Corda Subordinate Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-12T11:30:00,782Z [main] ConsolePrint.invoke - Updating the key `cordasubordinateca` certificate chain in the local store... {}
+[INFO ] 2019-03-12T11:30:00,786Z [main] ConsolePrint.updateCertificate - Certificate updated under the `cordasubordinateca` in the local store. {}
+[INFO ] 2019-03-12T11:30:00,791Z [main] ConsolePrint.generateKeyAndCsr - New key pair named cordadoormanca has been generated and stored in the local key store ./caKeyStore.jks. {}
+[INFO ] 2019-03-12T11:30:00,794Z [main] ConsolePrint.getSigningKeyPairAndCertificate - Retrieving the signing key pair. {}
+[INFO ] 2019-03-12T11:30:00,799Z [main] ConsolePrint.generateCertificate - Certificate for C=US,L=New York,O=Example HoldCo LLC,OU=Corda,CN=Corda Doorman Certificate created. {}
+[INFO ] 2019-03-12T11:30:00,799Z [main] ConsolePrint.generateCertificate - Certificate generated: [
+[
+  Version: V3
+  Subject: CN=Corda Doorman Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  Signature Algorithm: SHA256withECDSA, OID = 1.2.840.10045.4.3.2
+
+  Key:  Sun EC public key, 256 bits
+  public x coord: 30264712516494893195191015703287703959506654413508133329034124903061366580490
+  public y coord: 68055720116913328171502900868688638396028954206853334886534509453137337789529
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+  Validity: [From: Tue Mar 12 00:00:00 GMT 2019,
+               To: Mon Mar 07 00:00:00 GMT 2039]
+  Issuer: CN=Corda Subordinate Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  SerialNumber: [    211b6cab 37e4a1a2]
+
+Certificate Extensions: 6
+[1]: ObjectId: 1.3.6.1.4.1.50530.1.1 Criticality=false
+Extension unknown: DER encoded OCTET string =
+0000: 04 03 02 01 01                                     .....
+
+
+[2]: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: 49 9E 3D CE F7 EF 03 0B   62 CD 6D C3 2A 9F 55 13  I.=.....b.m.*.U.
+0010: 23 79 48 7E                                        #yH.
+]
+]
+
+[3]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+[4]: ObjectId: 2.5.29.37 Criticality=false
+ExtendedKeyUsages [
+  serverAuth
+  clientAuth
+]
+
+[5]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Key_CertSign
+  Crl_Sign
+]
+
+[6]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: B8 C7 15 32 57 D4 48 09   EA D7 99 B2 72 F2 8D 0D  ...2W.H.....r...
+0010: 08 CA 9B D2                                        ....
+]
+]
+
+]
+  Algorithm: [SHA256withECDSA]
+  Signature:
+0000: 30 46 02 21 00 D1 82 EE   46 CA CB 3B A9 CA A3 24  0F.!....F..;...$
+0010: 6E 9B 7B 1D E1 D8 92 10   EB 52 42 E2 42 2E BA 29  n........RB.B..)
+0020: FB 6A 93 56 2B 02 21 00   E2 4E 11 EC 2C 84 85 61  .j.V+.!..N..,..a
+0030: 65 2C 80 DB BF D5 13 0F   CC 6E 89 7A 83 F2 25 C0  e,.......n.z..%.
+0040: D5 02 9F EE 66 B9 CC F4                            ....f...
+
+] {}
+[INFO ] 2019-03-12T11:30:00,801Z [main] ConsolePrint.generateCertificate - Certificate stored under cordadoormanca in the certificate store. {}
+[INFO ] 2019-03-12T11:30:00,801Z [main] common.utils.validated - Constructed signing certificate chain of length 3: [CN=Corda Doorman Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Subordinate Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-12T11:30:00,803Z [main] ConsolePrint.invoke - Updating the key `cordadoormanca` certificate chain in the local store... {}
+[INFO ] 2019-03-12T11:30:00,804Z [main] ConsolePrint.updateCertificate - Certificate updated under the `cordadoormanca` in the local store. {}
+[INFO ] 2019-03-12T11:30:00,809Z [main] ConsolePrint.generateKeyAndCsr - New key pair named cordanetworkmap has been generated and stored in the local key store ./caKeyStore.jks. {}
+[INFO ] 2019-03-12T11:30:00,813Z [main] ConsolePrint.getSigningKeyPairAndCertificate - Retrieving the signing key pair. {}
+[INFO ] 2019-03-12T11:30:00,817Z [main] ConsolePrint.generateCertificate - Certificate for C=US,L=New York,O=Example HoldCo LLC,OU=Corda,CN=Corda Network Map Certificate created. {}
+[INFO ] 2019-03-12T11:30:00,818Z [main] ConsolePrint.generateCertificate - Certificate generated: [
+[
+  Version: V3
+  Subject: CN=Corda Network Map Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  Signature Algorithm: SHA256withECDSA, OID = 1.2.840.10045.4.3.2
+
+  Key:  Sun EC public key, 256 bits
+  public x coord: 64193957538340104294119632095780047635979581523268623992706677645984775098821
+  public y coord: 77999148917346706358558398505650040026919990406355367784450436854645216299328
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+  Validity: [From: Tue Mar 12 00:00:00 GMT 2019,
+               To: Mon Mar 07 00:00:00 GMT 2039]
+  Issuer: CN=Corda Subordinate Certificate, OU=Corda, O=Example HoldCo LLC, L=New York, C=US
+  SerialNumber: [    407abe37 d4cdc8a0]
+
+Certificate Extensions: 6
+[1]: ObjectId: 1.3.6.1.4.1.50530.1.1 Criticality=false
+Extension unknown: DER encoded OCTET string =
+0000: 04 03 02 01 02                                     .....
+
+
+[2]: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: 49 9E 3D CE F7 EF 03 0B   62 CD 6D C3 2A 9F 55 13  I.=.....b.m.*.U.
+0010: 23 79 48 7E                                        #yH.
+]
+]
+
+[3]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:false
+  PathLen: undefined
+]
+
+[4]: ObjectId: 2.5.29.37 Criticality=false
+ExtendedKeyUsages [
+  serverAuth
+  clientAuth
+]
+
+[5]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  DigitalSignature
+  Key_CertSign
+  Crl_Sign
+]
+
+[6]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 0B 7A AD 5A CD 07 C5 F4   91 D0 13 E6 A3 C5 FE 89  .z.Z............
+0010: 07 AE 3D AE                                        ..=.
+]
+]
+
+]
+  Algorithm: [SHA256withECDSA]
+  Signature:
+0000: 30 44 02 20 6A D8 53 22   1C EF FE E5 5A 3A 23 A5  0D. j.S"....Z:#.
+0010: 56 D7 E0 F6 8C D8 BE 5D   BF 00 5F 13 A9 48 77 E5  V......].._..Hw.
+0020: 79 E3 E3 2B 02 20 6A 7C   DC 8E 90 52 C6 93 EC 16  y..+. j....R....
+0030: 6C 73 67 C7 FC 85 91 38   14 B7 EE 0F DF C8 21 1B  lsg....8......!.
+0040: C9 18 52 5A 2B 1F                                  ..RZ+.
+
+] {}
+[INFO ] 2019-03-12T11:30:00,819Z [main] ConsolePrint.generateCertificate - Certificate stored under cordanetworkmap in the certificate store. {}
+[INFO ] 2019-03-12T11:30:00,820Z [main] common.utils.validated - Constructed signing certificate chain of length 3: [CN=Corda Network Map Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Subordinate Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US]->[CN=Corda Root Certificate,OU=Corda,O=Example HoldCo LLC,L=New York,C=US] {}
+[INFO ] 2019-03-12T11:30:00,821Z [main] ConsolePrint.invoke - Updating the key `cordanetworkmap` certificate chain in the local store... {}
+[INFO ] 2019-03-12T11:30:00,823Z [main] ConsolePrint.updateCertificate - Certificate updated under the `cordanetworkmap` in the local store. {}
